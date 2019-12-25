@@ -8,7 +8,7 @@ import smtplib
 channel = 21
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel, GPIO.IN)
-smtp_message="Hi Maulik, Please water your plants."
+smtp_message="Hello Ronak, Please water your plants."
 def callback(channel):
         if GPIO.input(channel):
             try:
@@ -20,7 +20,7 @@ def callback(channel):
                 connection.ehlo()
                 connection.starttls()
                 connection.login('shabbshabb1986@gmail.com','Shabb@1986')
-                connection.sendmail('shabbshabb1986@gmail.com','maulikm.96@gmail.com',smtp_message)
+                connection.sendmail('shabbshabb1986@gmail.com','jain.ronak8286@gmail.com',smtp_message)
                 connection.quit()
                 print ("No Water Detected!")
  
